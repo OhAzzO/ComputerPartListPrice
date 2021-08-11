@@ -16,3 +16,9 @@ I looked up computer part prices and made variables for each. Placed them in a t
   statement to show output determined by if the users amount is more or equal to the total amounts of either low end
 or high end computer. If the users fund is not enough for either they will be show that now current stock is available.
 
+Tried to implement try catch blocks for expectations i ran into an issue with the first input and don't want to be too late,
+i would like to make that happen so there would be no errors popping up.
+ Implementing getters and setters could of been a better idea for me going forward to populate a database and have that been
+able to add and remove parts with the final output been total price with that list of items( like a cart with information available)
+
+It is also planned to implement a function not allowing certain parts based around CPU chipset as they would not be compatible.
