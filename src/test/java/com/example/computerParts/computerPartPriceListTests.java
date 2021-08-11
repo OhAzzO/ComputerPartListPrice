@@ -1,10 +1,10 @@
-package com.example.ComputerPartPriceList;
+package com.example.computerParts;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ComputerPartPriceListTests {
+class computerPartPriceListTests {
 
 	@Test
 	void contextLoads() {
