@@ -17,51 +17,56 @@ public class computerPartPriceList {
 				"and we can help with part recommendations.");
 		int userFunds = scanner.nextInt();
 
-		// MotherBoard
+		// MotherBoard price.
 		int lowEndMotherBoard = 70;
 		int highEndMotherBoard = 110;
 
-		// CPU
+		// CPU price.
 		int lowEndCPU = 70;
 		int highEndCPU = 110;
 
-		// RAM
+		// RAM price.
 		int lowEndRAM = 30;
 		int highEndRAM = 150;
 
-		// Storage
+		// Storage price.
 		int lowEndStorage = 30;
 		int highEndStorage = 170;
 
-		// Power Supply
+		// Power Supply price.
 		int lowEndPowerSupply = 60;
 		int highEndPowerSupply = 200;
 
-		// Graphics Card
+		// Graphics Card price.
 		int lowEndGraphicCard = 200;
 		int highEndGraphicCard = 1200;
 
-		//case
+		//case price.
 		int lowEndCase = 70;
 		int highEndCase = 200;
 
 
-		//Totals price of parts
+		//Totals price of parts.
 		int lowEndTotal = lowEndCPU + lowEndRAM + lowEndStorage + lowEndMotherBoard + lowEndPowerSupply + lowEndGraphicCard + lowEndCase;
 		int highEndTotal = highEndCPU + highEndRAM + highEndStorage + highEndMotherBoard + highEndPowerSupply + highEndGraphicCard + highEndCase;
 
-		// How much more for low end
+			// How much more needed for low end computer.
+		int howMuchNeededForLowEnd = lowEndTotal - userFunds;
 
-		// A suggestion for the best parts for you build determined on the users price range
+		// How much more needed for high end computer.
+		int howMuchNeededForHighEnd = highEndTotal - userFunds;
+
+		// A suggestion for the best parts for you build determined on the users price range and how much needed for low end computer.
 		if (userFunds >= highEndMotherBoard + highEndCPU + highEndRAM + highEndStorage + highEndPowerSupply + highEndGraphicCard) {
 			System.out.println("HighEnd Computer available. " + "Total cost is $" + highEndTotal);
 		} else if (userFunds <= highEndTotal && userFunds > lowEndTotal) {
 			System.out.println("LowEnd Computer available. " + "Total cost is $" + lowEndTotal);
 		} else if (userFunds < lowEndTotal) {
-			System.out.println("Computers in Stock not available for you price range, please check back later.");
-			System.out.println();
+			System.out.println("Computers in Stock are not available for your price range, $" + howMuchNeededForLowEnd + " is needed for the purchase of a low end computer "
+					+ "please try again or check back later.");
 		}
 
+		//While loop to restart the process again.
 		System.out.println("Do you want to find another computer? Yes or No");
 		restart = scanner.next();
 		} while (restart.equalsIgnoreCase("Yes"));
