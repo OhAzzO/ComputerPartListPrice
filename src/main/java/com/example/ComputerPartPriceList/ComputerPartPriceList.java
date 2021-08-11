@@ -12,44 +12,45 @@ public class ComputerPartPriceList {
 		Scanner scanner = new Scanner(System.in);
 
 
-		System.out.println("hello, Please provide the amount you would like to spend on your new PC and we can help with part selection.");
+		System.out.println("hello, Please provide the amount you would like to spend on your new PC " +
+				"and we can help with part selection.");
 		int UserFunds = scanner.nextInt();
 
 		//MotherBoard
-		int LowEndMotherBoard = 70;
-		int HighEndMotherBoard = 110;
+		int lowEndMotherBoard = 70;
+		int highEndMotherBoard = 110;
 
 		//CPU
-		int LowEndCPU = 70;
-		int HighEndCPU = 110;
+		int lowEndCPU = 70;
+		int highEndCPU = 110;
 
 		//RAM
-		int LowEndRAM = 30;
-		int HighEndRAM = 150;
+		int lowEndRAM = 30;
+		int highEndRAM = 150;
 
 		//Storage
-		int LowEndStorage = 30;
-		int HighEndStorage = 170;
+		int lowEndStorage = 30;
+		int highEndStorage = 170;
 
 		//Power Supply
-		int LowEndPowerSupply = 60;
-		int HighEndPowerSupply = 200;
+		int lowEndPowerSupply = 60;
+		int highEndPowerSupply = 200;
 
 		//Graphics Card
-		int LowEndGraphicCard = 250;
-		int HighEndGraphicCard = 1200;
+		int lowEndGraphicCard = 250;
+		int highEndGraphicCard = 1200;
 		//case
 
 		//Totals price of parts
-		int LowEndTotal = LowEndCPU + LowEndRAM + LowEndStorage + LowEndMotherBoard + LowEndPowerSupply + LowEndGraphicCard;
-		int HighEndTotal = HighEndCPU + HighEndRAM + HighEndStorage + HighEndMotherBoard + HighEndPowerSupply + HighEndGraphicCard;
+		int lowEndTotal = lowEndCPU + lowEndRAM + lowEndStorage + lowEndMotherBoard + lowEndPowerSupply + lowEndGraphicCard;
+		int HighEndTotal = highEndCPU + highEndRAM + highEndStorage + highEndMotherBoard + highEndPowerSupply + highEndGraphicCard;
 
 		// a suggestion for the best parts for you build determined on the users price range
-		if (UserFunds >= HighEndMotherBoard + HighEndCPU + HighEndRAM + HighEndStorage + HighEndPowerSupply + HighEndGraphicCard){
+		if (UserFunds >= highEndMotherBoard + highEndCPU + highEndRAM + highEndStorage + highEndPowerSupply + highEndGraphicCard){
 			System.out.println("HighEnd Computer available. " + "Total cost is " + HighEndTotal);
-		}else if (UserFunds <= HighEndMotherBoard + HighEndCPU + HighEndRAM + HighEndStorage + HighEndPowerSupply + HighEndGraphicCard && UserFunds > LowEndTotal){
-			System.out.println("LowEnd Computer available. "  + "Total cost is " + LowEndTotal);
-		}else if(UserFunds < LowEndMotherBoard + LowEndCPU + LowEndRAM + LowEndStorage + LowEndPowerSupply + LowEndGraphicCard){
+		}else if (UserFunds <= highEndMotherBoard + highEndCPU + highEndRAM + highEndStorage + highEndPowerSupply + highEndGraphicCard && UserFunds > lowEndTotal){
+			System.out.println("LowEnd Computer available. "  + "Total cost is " + lowEndTotal);
+		}else if(UserFunds < lowEndMotherBoard + lowEndCPU + lowEndRAM + lowEndStorage + lowEndPowerSupply + lowEndGraphicCard){
 			System.out.println("Computers in Stock not available for you price range, please check back later.");
 		}
 

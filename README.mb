@@ -1,7 +1,18 @@
 This is my backup presentation due to having issues with my spring.
-  This project is meant to help you with building a computer,
- knowing the cost and picking individual parts within your budget to build your own computer.
 
- This will give you an option to give your price that you would like to spend and using a function
-  will suggest what computer you will be able to afford, the total price ( and eventually to be able to display each item
- in the corresponding list with it editable for personalised builds).
+
+  This project is meant to help you with building a computer that fits your budget.
+It is well suited for someone interested in building there first computer as it will have full suggestions base
+around the user's price range if available.
+
+ These computers will be split into 2 categories been low end and high end.
+
+You will be able to input the amount you would like to spend and receive the best computer build
+available from the business's stock.
+ This is achieved by a function that goes through each variable, grabs each parts price and gives you the best
+  computer and total price for your budget.
+
+I looked up computer part prices and made variables for each. Placed them in a total variable and used a If else
+  statement to show output determined by if the users amount is more or equal to the total amounts of either low end
+or high end computer. If the users fund is not enough for either they will be show that now current stock is available.
+
