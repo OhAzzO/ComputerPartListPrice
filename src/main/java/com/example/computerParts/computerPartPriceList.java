@@ -10,11 +10,10 @@ public class computerPartPriceList {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-
 		String restart;
-		//greeting output
-		do {
 
+		do {
+			//greeting output
 			System.out.println("Hello, please provide the amount you would like to spend on your new PC " +
 					"and we can help with part recommendations.");
 			int userFunds = scanner.nextInt();
@@ -53,10 +52,10 @@ public class computerPartPriceList {
 			int lowEndTotal = lowEndCPU + lowEndRAM + lowEndStorage + lowEndMotherBoard + lowEndPowerSupply + lowEndGraphicCard + lowEndCase;
 			int highEndTotal = highEndCPU + highEndRAM + highEndStorage + highEndMotherBoard + highEndPowerSupply + highEndGraphicCard + highEndCase;
 
-			// How much more needed for low end computer.
+			// How much more needed for high-end computer.
 			int howMuchNeededForLowEnd = lowEndTotal - userFunds;
 
-			// How much more needed for high end computer.
+			// How much more needed for high-end computer.
 			int howMuchNeededForHighEnd = highEndTotal - userFunds;
 
 			// A suggestion for the best parts for you build determined on the users price range and how much needed for low end computer.
@@ -66,8 +65,8 @@ public class computerPartPriceList {
 				System.out.println("LowEnd Computer available. " + "Total cost is $" + lowEndTotal + ", and $"
 						+ howMuchNeededForHighEnd + " is needed for the purchase of a high end computer");
 			} else if (userFunds < lowEndTotal) {
-				System.out.println("Computers in Stock are not available for your price range, $" + howMuchNeededForLowEnd + " is needed for the purchase of a low end computer "
-						+ "please try again or check back later.");
+				System.out.println("Computers in Stock are not available for your price range, $" + howMuchNeededForLowEnd
+						+ " is needed for the purchase of a low end computer " + "please try again or check back later.");
 			}
 			// Try catch for input.
 			try {
@@ -82,7 +81,7 @@ public class computerPartPriceList {
 			}
 		}while (restart.equalsIgnoreCase("Yes")) ;
 
-		}
+	}
 
 }
 
