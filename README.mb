@@ -1,0 +1,7 @@
+This is my backup presentation due to having issues with my spring.
+  This project is meant to help you with building a computer,
+ knowing the cost and picking individual parts within your budget to build your own computer.
+
+ This will give you an option to give your price that you would like to spend and using a function
+  will suggest what computer you will be able to afford, the total price ( and eventually to be able to display each item
+ in the corresponding list with it editable for personalised builds).
